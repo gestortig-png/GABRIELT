@@ -1,0 +1,493 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Gabriel Telles · Cacau Show · Pronta entrega</title>
+<meta name="description" content="Chocolates Cacau Show à pronta entrega em São José da Lapa. Escolha e peça pelo WhatsApp.">
+<meta name="theme-color" content="#2D1610">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Gabriel Telles · Cacau Show">
+<meta property="og:description" content="Pronta entrega em São José da Lapa. Escolha com calma, eu separo para você.">
+<meta property="og:image" content="https://gestortig-png.github.io/GABRIELT/og.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%232D1610'/%3E%3Ctext x='32' y='42' font-family='Georgia' font-size='28' fill='%23E0BE6F' text-anchor='middle'%3EGT%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#FAF6F0;--cream2:#F2EAE0;--line:#E8DDD0;--cocoa:#2D1610;--cocoa2:#46241B;
+  --gold:#C59B43;--gold2:#E0BE6F;--wa:#128C4A;--muted:rgba(45,22,16,.62);
+  --serif:"Playfair Display",Georgia,serif;--sans:"Plus Jakarta Sans",system-ui,sans-serif;
+  --shadow:0 8px 26px -12px rgba(45,22,16,.16);--shadow2:0 18px 40px -14px rgba(45,22,16,.28);
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--cocoa);font-family:var(--sans);font-size:15px;line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+button{font:inherit;color:inherit;cursor:pointer;border:0;background:none;padding:0}
+img{display:block;max-width:100%}
+.wrap{max-width:1200px;margin:0 auto;padding:0 16px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+/* header */
+header{position:sticky;top:0;z-index:30;background:rgba(250,246,240,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.hd{display:flex;align-items:center;justify-content:space-between;gap:12px;height:64px}
+.brand{display:flex;align-items:center;gap:11px;min-width:0}
+.mono{width:40px;height:40px;border-radius:13px;background:var(--cocoa);color:var(--gold2);display:grid;place-items:center;font-family:var(--serif);font-size:16px;letter-spacing:.04em;border:1px solid rgba(197,155,67,.45);flex:none}
+.brand small{display:block;font-size:9.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+.brand b{display:block;font-family:var(--serif);font-weight:600;font-size:17px;line-height:1.15;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.wa-top{display:inline-flex;align-items:center;gap:7px;padding:9px 13px;border-radius:12px;background:var(--cocoa);color:var(--cream);font-size:12.5px;font-weight:600;flex:none}
+.wa-top svg{width:17px;height:17px;color:#5BD48F}
+
+/* hero */
+.hero{padding:30px 0 6px;text-align:center}
+.eyebrow{font-size:10.5px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
+.hero h1{font-family:var(--serif);font-weight:500;font-style:italic;font-size:clamp(30px,7vw,46px);line-height:1.1;margin:10px 0 8px}
+.hero p{margin:0 auto;max-width:460px;color:var(--muted);font-size:14.5px}
+.orn{display:flex;align-items:center;justify-content:center;gap:10px;margin:16px 0 0;color:var(--gold)}
+.orn i{display:block;width:46px;height:1px;background:linear-gradient(90deg,transparent,var(--gold))}
+.orn i:last-child{transform:scaleX(-1)}
+.orn span{width:6px;height:6px;transform:rotate(45deg);background:var(--gold)}
+
+/* filtros */
+.tools{position:sticky;top:64px;z-index:20;background:linear-gradient(var(--cream) 82%,rgba(250,246,240,0));padding:14px 0 10px}
+.search{position:relative;max-width:520px;margin:0 auto 12px}
+.search input{width:100%;height:44px;border-radius:14px;border:1px solid var(--line);background:#fff;padding:0 40px 0 42px;font:inherit;font-size:14px;color:var(--cocoa);outline:none;box-shadow:var(--shadow)}
+.search input:focus{border-color:var(--gold)}
+.search svg{position:absolute;left:14px;top:13px;width:18px;height:18px;color:var(--muted)}
+.search button{position:absolute;right:8px;top:8px;width:28px;height:28px;border-radius:8px;display:none;color:var(--muted)}
+.cats{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding:2px 16px;margin:0 -16px}
+.cats::-webkit-scrollbar{display:none}
+.cat{flex:none;padding:8px 14px;border-radius:999px;border:1px solid var(--line);background:#fff;font-size:12.5px;font-weight:600;color:rgba(45,22,16,.78);white-space:nowrap;transition:.2s}
+.cat[aria-pressed="true"]{background:var(--cocoa);border-color:var(--cocoa);color:var(--cream)}
+.cat em{font-style:normal;font-weight:500;opacity:.6;margin-left:4px}
+
+/* secoes e grade */
+main{padding-bottom:120px}
+.sec h2{font-family:var(--serif);font-weight:500;font-size:22px;margin:26px 0 12px;display:flex;align-items:baseline;gap:10px}
+.sec h2 small{font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media(min-width:720px){.grid{grid-template-columns:repeat(3,1fr);gap:16px}}
+@media(min-width:1040px){.grid{grid-template-columns:repeat(4,1fr);gap:20px}}
+.card{position:relative;background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:var(--shadow);transition:transform .3s,box-shadow .3s;text-align:left;display:flex;flex-direction:column}
+.card:hover{transform:translateY(-2px);box-shadow:var(--shadow2)}
+.stage{position:relative;aspect-ratio:1/1;background:radial-gradient(circle at 50% 46%,#fff 50%,#F4ECE1 100%);display:grid;place-items:center;padding:14%}
+.stage img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 10px 12px rgba(45,22,16,.16));transition:transform .5s}
+.card:hover .stage img{transform:scale(1.05)}
+.tag{position:absolute;left:10px;top:10px;padding:4px 9px;border-radius:999px;font-size:9.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.tag.last{background:var(--cocoa);color:var(--gold2)}
+.tag.zero{background:#E4F1F8;color:#1E5D82}
+.stage,.info{width:100%;text-align:left}
+.info{padding:11px 56px 14px 13px;flex:1;display:flex;flex-direction:column;gap:2px}
+.info small{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
+.info b{font-family:var(--serif);font-weight:600;font-size:15px;line-height:1.25}
+.info .pr{margin-top:auto;padding-top:6px;font-size:13px;font-weight:700}
+.add{position:absolute;right:10px;bottom:10px;height:36px;min-width:36px;padding:0 10px;border-radius:999px;background:var(--cocoa);color:var(--cream);display:flex;align-items:center;justify-content:center;gap:4px;font-size:13px;font-weight:700;box-shadow:0 6px 14px -6px rgba(45,22,16,.5);transition:.15s}
+.add:active{transform:scale(.92)}
+.add.on{background:var(--wa)}
+.add svg{width:16px;height:16px}
+.empty{text-align:center;padding:60px 0;color:var(--muted)}
+
+/* barra flutuante */
+.bar{position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));z-index:35;max-width:440px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 14px 12px 12px;border-radius:18px;background:var(--cocoa);color:var(--cream);border:1px solid rgba(197,155,67,.45);box-shadow:0 18px 40px -12px rgba(45,22,16,.55);transform:translateY(140%);transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+.bar.show{transform:none}
+.bar .n{width:34px;height:34px;border-radius:11px;background:var(--gold2);color:var(--cocoa);display:grid;place-items:center;font-weight:700;font-size:14px;flex:none}
+.bar .t{flex:1;font-size:13.5px;font-weight:600;text-align:left}
+.bar .t small{display:block;font-size:11px;font-weight:500;color:var(--gold2)}
+.bar svg{width:20px;height:20px;color:var(--gold2)}
+
+/* modal produto */
+.ov{position:fixed;inset:0;z-index:50;background:rgba(32,15,10,.62);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);display:flex;align-items:flex-end;justify-content:center;opacity:0;pointer-events:none;transition:opacity .3s}
+.ov.on{opacity:1;pointer-events:auto}
+.sheet{width:100%;max-width:520px;max-height:92vh;overflow:auto;background:var(--cream);border-radius:26px 26px 0 0;transform:translateY(40px);transition:transform .4s cubic-bezier(.2,.8,.2,1);position:relative;padding-bottom:env(safe-area-inset-bottom)}
+.ov.on .sheet{transform:none}
+@media(min-width:720px){.ov{align-items:center}.sheet{border-radius:26px;max-width:880px;display:grid;grid-template-columns:1.05fr 1fr}}
+.x{position:absolute;right:12px;top:12px;z-index:3;width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.95);display:grid;place-items:center;box-shadow:var(--shadow)}
+.x svg{width:18px;height:18px}
+.pstage{position:relative;aspect-ratio:1/1;background:radial-gradient(circle at 50% 46%,#fff 52%,#F1E7DA 100%);display:grid;place-items:center;padding:12%;touch-action:pan-y}
+.pstage img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 18px 20px rgba(45,22,16,.22))}
+.nav{position:absolute;top:50%;transform:translateY(-50%);width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.9);display:grid;place-items:center;box-shadow:var(--shadow)}
+.nav svg{width:18px;height:18px}.nav.p{left:10px}.nav.n{right:10px}
+.cnt{position:absolute;left:14px;top:14px;font-size:11px;font-weight:600;color:var(--muted)}
+.pbody{padding:20px 22px 24px}
+.pbody small{font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+.pbody h3{font-family:var(--serif);font-weight:600;font-size:24px;line-height:1.2;margin:6px 0 4px}
+.pbody .tit{font-size:12.5px;color:var(--muted);margin:0 0 12px}
+.pbody .d{font-size:14px;line-height:1.65;margin:0 0 14px}
+.chips{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:16px}
+.chips span{font-size:11.5px;font-weight:600;padding:5px 10px;border-radius:999px;background:#fff;border:1px solid var(--line)}
+.chips .z{background:#E4F1F8;border-color:#C9E2EF;color:#1E5D82}
+.chips .l{background:var(--cocoa);border-color:var(--cocoa);color:var(--gold2)}
+.ppr{font-family:var(--serif);font-size:24px;font-weight:600;margin:0 0 14px}
+.row{display:flex;gap:10px;align-items:stretch}
+.qty{display:flex;align-items:center;border:1px solid var(--line);border-radius:14px;background:#fff}
+.qty button{width:42px;height:48px;font-size:18px;font-weight:700}
+.qty span{min-width:26px;text-align:center;font-weight:700}
+.btn{flex:1;height:50px;border-radius:14px;background:var(--cocoa);color:var(--cream);font-weight:600;font-size:14px;letter-spacing:.02em}
+.btn2{width:100%;margin-top:10px;height:46px;border-radius:14px;border:1px solid rgba(18,140,74,.35);background:rgba(18,140,74,.07);color:#0E6B39;font-weight:600;font-size:13.5px;display:flex;align-items:center;justify-content:center;gap:8px}
+.btn2 svg{width:17px;height:17px}
+.lim{font-size:11.5px;color:var(--muted);margin:8px 0 0}
+
+/* selecao */
+.drawer{width:100%;max-width:460px;height:100%;max-height:100%;margin-left:auto;background:var(--cream);display:flex;flex-direction:column;transform:translateX(100%);transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+.ov.on .drawer{transform:none}
+#ovBag{align-items:stretch;justify-content:flex-end}
+.dh{display:flex;align-items:center;justify-content:space-between;padding:18px 20px;border-bottom:1px solid var(--line);background:#fff}
+.dh h3{font-family:var(--serif);font-weight:600;font-size:21px;margin:0}
+.dh p{margin:2px 0 0;font-size:12px;color:var(--muted)}
+.dl{flex:1;overflow:auto;padding:14px 16px;display:flex;flex-direction:column;gap:10px}
+.it{display:flex;gap:12px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:16px;padding:10px}
+.it img{width:58px;height:58px;object-fit:contain;flex:none;background:radial-gradient(circle,#fff 55%,#F4ECE1);border-radius:12px;padding:5px}
+.it div{flex:1;min-width:0}
+.it small{font-size:9.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
+.it b{display:block;font-size:13.5px;font-weight:600;line-height:1.3}
+.it .qty button{width:32px;height:34px;font-size:15px}
+.df{padding:16px 18px calc(16px + env(safe-area-inset-bottom));border-top:1px solid var(--line);background:#fff;display:flex;flex-direction:column;gap:10px}
+.df input,.df textarea{width:100%;border:1px solid var(--line);border-radius:12px;background:var(--cream);padding:11px 13px;font:inherit;font-size:14px;color:var(--cocoa);outline:none;resize:none}
+.df input:focus,.df textarea:focus{border-color:var(--gold)}
+.seg{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.seg label{position:relative}
+.seg input{position:absolute;opacity:0}
+.seg span{display:block;text-align:center;padding:10px;border-radius:12px;border:1px solid var(--line);background:var(--cream);font-size:13px;font-weight:600}
+.seg input:checked+span{background:var(--cocoa);color:var(--cream);border-color:var(--cocoa)}
+.seg input:focus-visible+span{outline:2px solid var(--gold)}
+.send{height:52px;border-radius:14px;background:var(--wa);color:#fff;font-weight:700;font-size:14.5px;display:flex;align-items:center;justify-content:center;gap:9px}
+.send svg{width:19px;height:19px}
+.tot{display:flex;justify-content:space-between;font-size:13px;color:var(--muted)}
+.tot button{color:#8E1B24;font-weight:600;font-size:12.5px}
+.bempty{margin:auto;text-align:center;color:var(--muted);padding:40px 20px}
+.bempty b{display:block;font-family:var(--serif);font-size:19px;color:var(--cocoa);margin-bottom:4px}
+
+footer{border-top:1px solid var(--line);padding:22px 0 110px;text-align:center;font-size:12px;color:var(--muted)}
+footer b{display:block;font-family:var(--serif);font-size:15px;color:var(--cocoa);font-weight:500;margin-bottom:2px}
+.toast{position:fixed;left:50%;top:76px;z-index:60;transform:translate(-50%,-10px);opacity:0;background:var(--cocoa);color:var(--cream);padding:10px 16px;border-radius:12px;font-size:13px;font-weight:600;border:1px solid rgba(197,155,67,.4);transition:.25s;pointer-events:none;white-space:nowrap}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap hd">
+    <div class="brand">
+      <div class="mono" aria-hidden="true">GT</div>
+      <div style="min-width:0"><small>Revendedor Cacau Show</small><b id="nomeTopo"></b></div>
+    </div>
+    <button class="wa-top" id="waTopo" type="button" aria-label="Falar no WhatsApp">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.2-.3-.2-.5-.3Z"/></svg>
+      <span>WhatsApp</span>
+    </button>
+  </div>
+</header>
+
+<section class="wrap hero">
+  <div class="eyebrow">Pronta entrega · São José da Lapa</div>
+  <h1>Escolha com calma.</h1>
+  <p>Tudo o que você vê aqui já está separado e pronto para chegar até você.</p>
+  <div class="orn" aria-hidden="true"><i></i><span></span><i></i></div>
+</section>
+
+<div class="tools">
+  <div class="wrap">
+    <div class="search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5" stroke-linecap="round"/></svg>
+      <label class="sr" for="busca">Buscar chocolate</label>
+      <input id="busca" type="search" placeholder="Buscar sabor: pistache, avelã, zero açúcar…" autocomplete="off">
+      <button id="limpa" type="button" aria-label="Limpar busca">✕</button>
+    </div>
+    <div class="cats" id="cats" role="toolbar" aria-label="Categorias"></div>
+  </div>
+</div>
+
+<main class="wrap" id="lista"></main>
+
+<footer class="wrap"><b id="nomeRodape"></b>Revendedor Cacau Show · São José da Lapa, MG<br><span id="foneRodape"></span></footer>
+
+<button class="bar" id="bar" type="button" aria-label="Ver minha seleção">
+  <span class="n" id="barN">0</span>
+  <span class="t">Ver minha seleção<small id="barS">Enviar pedido pelo WhatsApp</small></span>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m9 6 6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+
+<!-- produto -->
+<div class="ov" id="ovProd" aria-hidden="true">
+  <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="pNome">
+    <button class="x" id="pFecha" type="button" aria-label="Fechar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M6 6l12 12M18 6 6 18" stroke-linecap="round"/></svg></button>
+    <div class="pstage" id="pStage">
+      <span class="cnt" id="pCnt"></span>
+      <img id="pImg" alt="">
+      <button class="nav p" id="pAnt" type="button" aria-label="Anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="m15 6-6 6 6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <button class="nav n" id="pProx" type="button" aria-label="Próximo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="m9 6 6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    </div>
+    <div class="pbody">
+      <small id="pCat"></small>
+      <h3 id="pNome"></h3>
+      <p class="tit" id="pTit"></p>
+      <p class="d" id="pDesc"></p>
+      <div class="chips" id="pChips"></div>
+      <p class="ppr" id="pPreco" hidden></p>
+      <div class="row">
+        <div class="qty"><button type="button" id="qMenos" aria-label="Diminuir">−</button><span id="qVal">1</span><button type="button" id="qMais" aria-label="Aumentar">+</button></div>
+        <button class="btn" id="pAdd" type="button">Adicionar à seleção</button>
+      </div>
+      <p class="lim" id="pLim"></p>
+      <button class="btn2" id="pPerg" type="button">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Z"/></svg>
+        Tirar uma dúvida sobre este chocolate
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- selecao -->
+<div class="ov" id="ovBag" aria-hidden="true">
+  <aside class="drawer" role="dialog" aria-modal="true" aria-labelledby="bTit">
+    <div class="dh">
+      <div><h3 id="bTit">Minha seleção</h3><p>O pedido é confirmado comigo no WhatsApp.</p></div>
+      <button class="x" style="position:static" id="bFecha" type="button" aria-label="Fechar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M6 6l12 12M18 6 6 18" stroke-linecap="round"/></svg></button>
+    </div>
+    <div class="dl" id="bLista"></div>
+    <div class="df" id="bRodape">
+      <label class="sr" for="cNome">Seu nome</label>
+      <input id="cNome" type="text" placeholder="Seu nome" autocomplete="name">
+      <div class="seg" role="radiogroup" aria-label="Como receber">
+        <label><input type="radio" name="rec" value="Entrega" checked><span>Entrega</span></label>
+        <label><input type="radio" name="rec" value="Retirada / combinar"><span>Retirar / combinar</span></label>
+      </div>
+      <label class="sr" for="cObs">Observações</label>
+      <textarea id="cObs" rows="2" placeholder="Setor, endereço, horário ou se é para presente"></textarea>
+      <div class="tot"><span id="bTot"></span><button type="button" id="bLimpa">Limpar seleção</button></div>
+      <button class="send" id="bEnvia" type="button">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Z"/></svg>
+        Enviar pedido pelo WhatsApp
+      </button>
+    </div>
+  </aside>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(() => {
+'use strict';
+/* ============ CONFIGURAÇÃO ============ */
+const CONFIG = {
+  nome: 'Gabriel Telles',
+  whatsapp: '5531982358419',   // 55 + DDD + número
+  mostrarPreco: false,         // true = mostra o preço de catálogo nos cards e no pedido
+  ultimasUnidades: 2           // selo "Últimas unidades" quando restar até este número
+};
+/* Estoque: extrato do Pedido 1543034 (24/11/2026). */
+const P = [{"id": "1004300", "cat": "Presentes & Natal", "nome": "Mini Show Avelã · Vermelha", "linha": "Caixa de bombons 108 g", "titulo": "Caixa de Bombons Mini Show Avelã Vermelha 108g", "desc": "Bombons de chocolate ao leite e chocolate branco com delicioso recheio de avelã. Uma combinação irresistível em uma embalagem vermelha temática de Natal.", "preco": 42.49, "qtd": 6, "tags": ["natal"], "img": "img/1004300.webp"}, {"id": "1004299", "cat": "Presentes & Natal", "nome": "Mini Show Avelã · Dourada", "linha": "Caixa de bombons 108 g", "titulo": "Caixa de Bombons Mini Show Avelã Dourada 108G", "desc": "Bombons de chocolate ao leite e chocolate branco com recheio de avelã, em uma elegante embalagem dourada natalina.", "preco": 42.49, "qtd": 5, "tags": ["natal"], "img": "img/1004299.webp"}, {"id": "1003980", "cat": "Presentes & Natal", "nome": "Mini Show laCreme Pistache", "linha": "Caixa de bombons 108 g", "titulo": "Caixa de Bombons laCreme Mini Show Pistache 108g", "desc": "Bombons de Chocolate ao leite e branco com recheio de creme de pistache, perfeitos para presentear e tornar o momento especial.", "preco": 42.49, "qtd": 2, "tags": [], "img": "img/1003980.webp"}, {"id": "1003981", "cat": "Presentes & Natal", "nome": "Mini Show laCreme Gianduia", "linha": "Caixa de bombons 108 g", "titulo": "Caixa de Bombons laCreme Mini Show Gianduia 108g", "desc": "Bombons de chocolate ao leite com recheio de creme de avelã, perfeitos para presentear ou saborear em momentos especiais.", "preco": 42.49, "qtd": 2, "tags": [], "img": "img/1003981.webp"}, {"id": "1003886", "cat": "Presentes & Natal", "nome": "Caixa Feliz Natal", "linha": "Bombons 88 g", "titulo": "Caixa de Bombons ao Leite Feliz Natal 88g", "desc": "Esta caixa traz uma combinação irresistível: bombons ao leite com recheio de leite, um pinheiro de chocolate ao leite decorado e um papai noel de chocolate branco decorado", "preco": 39.49, "qtd": 4, "tags": ["natal"], "img": "img/1003886.webp"}, {"id": "1004243", "cat": "Presentes & Natal", "nome": "Livro dos Monstros · Harry Potter", "linha": "Tabletes + pelúcia 160 g", "titulo": "Caixa de Tabletes com Pelúcia Livro dos Monstros Harry Potter 160g", "desc": "Caixa com tabletes de chocolate ao leite acompanhada de uma divertida pelúcia do Livro dos Monstros de Harry Potter.", "preco": 109.99, "qtd": 3, "tags": [], "img": "img/1004243.webp"}, {"id": "1002633", "cat": "Trufas 30 g", "nome": "Tradicional", "linha": "Trufa 30 g", "titulo": "Trufa ao Leite Tradicional 30g", "desc": "Levemente firme por fora, com recheio macio e sabor muito característico e delicioso por dentro. Aqui, a casquinha de chocolate ao leite e o recheio de trufa tradicional, formam uma deliciosa combinação.", "preco": 5.29, "qtd": 50, "tags": [], "img": "img/1002633.webp"}, {"id": "1003394", "cat": "Trufas 30 g", "nome": "Pistache", "linha": "Trufa 30 g", "titulo": "Trufa de Chocolate ao Leite e Pistache 30g", "desc": "Trufa de chocolate ao leite com recheio de creme de pistache,uma delícia que só a Cacau Show sabe fazer!", "preco": 6.49, "qtd": 5, "tags": [], "img": "img/1003394.webp"}, {"id": "1002642", "cat": "Trufas 30 g", "nome": "Avelã", "linha": "Trufa 30 g", "titulo": "Trufa de Chocolate ao Leite e Avelã 30g", "desc": "Trufa de chocolate ao leite com recheio cremoso de avelã, uma delícia que só a Cacau Show sabe fazer!", "preco": 6.49, "qtd": 5, "tags": [], "img": "img/1002642.webp"}, {"id": "1004176", "cat": "Trufas 30 g", "nome": "laCreme 55% Cacau", "linha": "Trufa 30 g", "titulo": "Trufa de Chocolate laCreme 55% Cacau 30g", "desc": "Conheça a Trufa de Chocolate laCreme 55% Cacau, uma opção para deixar o seu dia a dia ainda mais intenso, com muito sabor e cremosidade. Um encanto de trufa!", "preco": 5.29, "qtd": 5, "tags": [], "img": "img/1004176.webp"}, {"id": "1002604", "cat": "Trufas 30 g", "nome": "Morango", "linha": "Trufa 30 g", "titulo": "Trufa ao Leite de Morango 30g", "desc": "Levemente firme por fora, com recheio macio e sabor muito característico e delicioso por dentro. Aqui, chocolate ao leite e morango formam uma deliciosa combinação.", "preco": 5.29, "qtd": 5, "tags": [], "img": "img/1002604.webp"}, {"id": "1002724", "cat": "Trufas 30 g", "nome": "Paçoca", "linha": "Trufa 30 g", "titulo": "Trufa ao Leite de Paçoca 30g", "desc": "Trufa de chocolate ao leite com recheio de creme de amendoim. Bom demais, sô!", "preco": 5.29, "qtd": 5, "tags": [], "img": "img/1002724.webp"}, {"id": "1002634", "cat": "Trufas 30 g", "nome": "Chocolate Branco", "linha": "Trufa 30 g", "titulo": "Trufa de Chocolate Branco 30g", "desc": "Levemente firme por fora, com recheio macio e sabor muito característico e delicioso por dentro. Aqui, a casquinha e o recheio, ambos de chocolate branco, formam uma deliciosa combinação.", "preco": 5.29, "qtd": 5, "tags": [], "img": "img/1002634.webp"}, {"id": "1002622", "cat": "Trufas 30 g", "nome": "Coco", "linha": "Trufa 30 g", "titulo": "Trufa Coco 30g", "desc": "Levemente firme por fora, com recheio macio e sabor muito característico e delicioso por dentro. Aqui, o chocolate ao leite e o coco formam uma deliciosa combinação.", "preco": 5.29, "qtd": 5, "tags": [], "img": "img/1002622.webp"}, {"id": "1002616", "cat": "Trufas 30 g", "nome": "Mezzo", "linha": "Trufa 30 g", "titulo": "Trufa de Chocolate ao Leite e Branco Mezzo 30g", "desc": "Levemente firme por fora, com recheio macio e sabor muito característico e delicioso por dentro. Aqui, o chocolate ao leite e branco formam uma deliciosa combinação.", "preco": 5.29, "qtd": 4, "tags": [], "img": "img/1002616.webp"}, {"id": "1003788", "cat": "Tabletes 100 g", "nome": "laCreme Branco com Pistache", "linha": "Tablete 100 g", "titulo": "Tablete laCreme de Chocolate Branco com Pistache 100g", "desc": "Delicie-se com o Tablete laCreme Branco com Pistache: delicioso chocolate branco, combinado ao sabor sofisticado do pistache.", "preco": 24.49, "qtd": 2, "tags": [], "img": "img/1003788.webp"}, {"id": "1003774", "cat": "Tabletes 100 g", "nome": "laCreme Duo Intense", "linha": "Tablete 100 g", "titulo": "Tablete laCreme Duo Intense 100g", "desc": "O Tablete de Chocolate ao Leite e Intenso é o equilíbrio perfeito entre a cremosidade do chocolate ao leite e o sabor marcante do chocolate intenso, para quem ama sabor autêntico.", "preco": 24.49, "qtd": 3, "tags": [], "img": "img/1003774.webp"}, {"id": "1002638", "cat": "Tabletes 100 g", "nome": "laCreme ao Leite", "linha": "Tablete 100 g", "titulo": "Tablete laCreme de Chocolate ao Leite 100g", "desc": "Um gosto inesperado: você fecha os olhos de tão bom. LaCreme é um chocolate que derrete na boca. Aqui, uma experiência inesquecível para os amantes do chocolate ao leite, que fará você se deliciar a cada mordida, a cada pedaço.", "preco": 21.29, "qtd": 14, "tags": [], "img": "img/1002638.webp"}, {"id": "1002866", "cat": "Tabletes 100 g", "nome": "laCreme Branco", "linha": "Tablete 100 g", "titulo": "Tablete laCreme de Chocolate Branco 100g", "desc": "Um gosto inesperado: você fecha os olhos de tão bom. LaCreme é um chocolate que derrete na boca. Aqui, uma experiência inesquecível para os amantes do chocolate branco, que fará você se deliciar a cada mordida, a cada pedaço.", "preco": 21.29, "qtd": 7, "tags": [], "img": "img/1002866.webp"}, {"id": "1003107", "cat": "Tabletes 100 g", "nome": "laCreme Mezzo", "linha": "Tablete 100 g", "titulo": "Tablete laCreme de Chocolate Mezzo 100g", "desc": "Perfeito para você que busca o chocolate ao leite e branco e fica na dúvida de qual escolher. Esse tablete é o melhor dos dois mundos com um sabor único, mais leite em sua receita e a cremosidade que só o chocolate laCreme tem!", "preco": 21.29, "qtd": 5, "tags": [], "img": "img/1003107.webp"}, {"id": "1003790", "cat": "Tabletes 100 g", "nome": "laCreme Gianduia", "linha": "Tablete 100 g", "titulo": "Tablete laCreme de Chocolate ao Leite e Avelã 100g", "desc": "Tablete de chocolate ao leite com pasta de avelã", "preco": 21.29, "qtd": 2, "tags": [], "img": "img/1003790.webp"}, {"id": "1003698", "cat": "Tabletes 100 g", "nome": "laCreme Kids", "linha": "Tablete 130 g", "titulo": "Tablete laCreme Kids 130g", "desc": "Tablete laCreme Kids de 130 g, de chocolate ao leite com recheio sabor leite.", "preco": 26.49, "qtd": 2, "tags": [], "img": "img/1003698.webp"}, {"id": "1004043", "cat": "Zero Açúcar e Lactose", "nome": "Bless ao Leite", "linha": "Trufa 30 g", "titulo": "Trufa Bless Zero Açúcar e Zero Lactose de Chocolate ao Leite 30g", "desc": "Trufa de chocolate ao leite, cremosa e saborosa, perfeita para quem ama chocolate. Massa unificada, zero adição de açúcares e zero lactose.", "preco": 6.99, "qtd": 4, "tags": ["zero"], "img": "img/1004043.webp"}, {"id": "1004044", "cat": "Zero Açúcar e Lactose", "nome": "Bless Branca", "linha": "Trufa 30 g", "titulo": "Trufa Bless Zero Açúcar e Zero Lactose de Chocolate Branco 30g", "desc": "Trufa de chocolate branco, cremosa e delicada, com o sabor irresistível do chocolate branco. Massa unificada, zero adição de açúcares e zero lactose.", "preco": 6.99, "qtd": 2, "tags": ["zero"], "img": "img/1004044.webp"}, {"id": "1004210", "cat": "Zero Açúcar e Lactose", "nome": "Bless Morango", "linha": "Trufa 30 g", "titulo": "Trufa Bless Zero Açúcar e Zero Lactose de Chocolate ao Leite com Morango 30g", "desc": "Trufa de chocolate ao leite com morango, uma combinação cremosa e delicada de chocolate ao leite e morango. Massa unificada, zero adição de açúcares e zero lactose.", "preco": 6.99, "qtd": 2, "tags": ["zero"], "img": "img/1004210.webp"}, {"id": "1004047", "cat": "Zero Açúcar e Lactose", "nome": "Bless ao Leite", "linha": "Tablete 20 g", "titulo": "Tablete Bless Zero Açúcar e Zero Lactose de Chocolate ao Leite 20g", "desc": "Tablete de chocolate ao leite, cremoso e saboroso, perfeito para saborear a qualquer momento. Massa unificada, zero adição de açúcares e zero lactose.", "preco": 6.99, "qtd": 7, "tags": ["zero"], "img": "img/1004047.webp"}, {"id": "1004049", "cat": "Zero Açúcar e Lactose", "nome": "Bless Branco", "linha": "Tablete 20 g", "titulo": "Tablete Bless Zero Açúcar e Zero Lactose de Chocolate Branco 20g", "desc": "Tablete de chocolate branco, cremoso e delicado, ideal para quem ama chocolate branco. Massa unificada, zero adição de açúcares e zero lactose.", "preco": 6.99, "qtd": 3, "tags": ["zero"], "img": "img/1004049.webp"}, {"id": "1004209", "cat": "Zero Açúcar e Lactose", "nome": "Bless Branco com Pistache", "linha": "Tablete 20 g", "titulo": "Tablete Bless Zero Açúcar e Zero Lactose de Chocolate Branco com Pistache 20g", "desc": "Tablete de chocolate branco com pistache, unindo a cremosidade do chocolate branco à textura e ao sabor do pistache. Massa unificada, zero adição de açúcares e zero lactose.", "preco": 7.99, "qtd": 3, "tags": ["zero"], "img": "img/1004209.webp"}, {"id": "1002600", "cat": "Tabletes 20 g", "nome": "laCreme ao Leite", "linha": "Tablete 20 g", "titulo": "Tablete laCreme de Chocolate ao Leite 20g", "desc": "LaCreme é uma experiência inesquecível para os amantes do chocolate ao leite, que fará você se deliciar a cada mordida. Em formato menor, um gesto de carinho, ideal para matar aquela vontade de chocolate a qualquer momento.", "preco": 5.29, "qtd": 3, "tags": [], "img": "img/1002600.webp"}, {"id": "1002636", "cat": "Tabletes 20 g", "nome": "laCreme Branco", "linha": "Tablete 20 g", "titulo": "Tablete laCreme de Chocolate Branco 20g", "desc": "Um gosto inesperado: você fecha os olhos de tão bom. LaCreme é um chocolate que derrete na boca. Aqui, uma experiência inesquecível para os amantes do chocolate branco!", "preco": 5.29, "qtd": 4, "tags": [], "img": "img/1002636.webp"}, {"id": "1004017", "cat": "Tabletes 20 g", "nome": "laCreme Gianduia", "linha": "Tablete 20 g", "titulo": "Tablete laCreme Gianduia 20g", "desc": "O irresistível sabor do Gianduia em uma versão prática, que combina o delicioso chocolate ao leite com um cremoso toque de avelã.", "preco": 5.29, "qtd": 3, "tags": [], "img": "img/1004017.webp"}, {"id": "1002620", "cat": "Tabletes 20 g", "nome": "Bendito Cacao 55%", "linha": "Tablete 20 g", "titulo": "Tablete Bendito Cacao de Chocolate 55% Cacau 20g", "desc": "O tradicional chocolate intenso, 55% cacau, um gesto de carinho, uma delícia. Ideal para matar aquela vontade no fim da tarde!", "preco": 5.29, "qtd": 5, "tags": [], "img": "img/1002620.webp"}, {"id": "1002599", "cat": "Tabletes 20 g", "nome": "Laranja", "linha": "Tablete 20 g", "titulo": "Tablete de Chocolate ao Leite de Laranja 20g", "desc": "O tradicional chocolate ao leite da Cacau Show com sabor laranja, um gesto de carinho. Ideal para matar aquela vontade de chocolate no fim da tarde!", "preco": 5.29, "qtd": 5, "tags": [], "img": "img/1002599.webp"}, {"id": "1002601", "cat": "Tabletes 20 g", "nome": "Castanha de Caju", "linha": "Tablete 20 g", "titulo": "Tablete ao Leite com Castanha de Caju 20g", "desc": "O tradicional chocolate ao leite da Cacau Show com pedaços de castanha de caju, um gesto de carinho, uma delícia. Ideal para matar aquela vontade de chocolate no fim da tarde!", "preco": 5.29, "qtd": 2, "tags": [], "img": "img/1002601.webp"}, {"id": "1002609", "cat": "Tabletes 20 g", "nome": "Pimenta", "linha": "Tablete 20 g", "titulo": "Tablete ao Leite de Pimenta 20g", "desc": "Feito com nosso delicioso chocolate ao leite, este tablete, em formato menor, possui um toque especial de pimenta que irá surpreender o paladar de quem gosta de contrastes.", "preco": 5.29, "qtd": 3, "tags": [], "img": "img/1002609.webp"}, {"id": "1002602", "cat": "Tabletes 20 g", "nome": "Crocante", "linha": "Tablete 18 g", "titulo": "Tablete de Chocolate ao Leite Crocante 18g", "desc": "O tradicional chocolate ao leite da Cacau Show com flocos crocantes, um gesto de carinho, uma delícia. Ideal para matar aquela vontade de chocolate no fim da tarde!", "preco": 5.29, "qtd": 3, "tags": [], "img": "img/1002602.webp"}, {"id": "1002968", "cat": "Bytes e Drageados", "nome": "Bytes ao Leite Crocante", "linha": "Drageado 100 g", "titulo": "Drageado Bytes ao Leite Crocante 100g", "desc": "Flocos de arroz crocantes cobertos por camadas de chocolate ao leite. Ótimo para comer com a galera!", "preco": 19.99, "qtd": 10, "tags": [], "img": "img/1002968.webp"}, {"id": "1003682", "cat": "Bytes e Drageados", "nome": "Biscoiteria Speculoos", "linha": "Drageado 100 g", "titulo": "Drageado Biscoiteria Speculoos 100g", "desc": "Drageados da linha Biscoiteria com biscoito sabor speculoos coberto de chocolate ao leite.", "preco": 19.99, "qtd": 10, "tags": [], "img": "img/1003682.webp"}, {"id": "1002913", "cat": "Bytes e Drageados", "nome": "Bytes Uva Passa", "linha": "Drageado 100 g", "titulo": "Drageado Bytes de Uva Passa 100g", "desc": "Drageados de uva passa com chocolate ao leite. Ótimo para comer com a galera!", "preco": 19.99, "qtd": 2, "tags": [], "img": "img/1002913.webp"}, {"id": "1002996", "cat": "Bytes e Drageados", "nome": "Bytes Branco Crocante", "linha": "Drageado 100 g", "titulo": "Drageado Bytes de Chocolate Branco Crocante 100g", "desc": "Drageados crocantes de chocolate branco. Ótimo para comer com a galera!", "preco": 19.99, "qtd": 1, "tags": [], "img": "img/1002996.webp"}, {"id": "1003113", "cat": "Biscoiteria", "nome": "Biscoito Caramelizado ao Leite", "linha": "Biscoito coberto 100 g", "titulo": "Biscoito Caramelizado ao Leite 100g", "desc": "Biscoito sabor especiarias coberto com chocolate ao leite e decorado com chocolate intenso. A crocância do biscoito com a cremosidade do chocolate, a combinação perfeita!", "preco": 18.29, "qtd": 2, "tags": [], "img": "img/1003113.webp"}, {"id": "1002946", "cat": "Tabletes 5 g", "nome": "laCreme Branco", "linha": "Tablete 5 g", "titulo": "Tablete laCreme de Chocolate Branco 5g", "desc": "Tablete de chocolate branco. Uma pequena porção de felicidade!", "preco": 1.39, "qtd": 22, "tags": [], "img": "img/1002946.webp"}, {"id": "1002964", "cat": "Tabletes 5 g", "nome": "Café", "linha": "Tablete 5 g", "titulo": "Tablete de Chocolate ao Leite Café 5g", "desc": "Tablete de chocolate ao leite sabor café. Ideal para acompanhar um bom café ou mesmo matar aquela vontade que surge a qualquer momento!", "preco": 1.39, "qtd": 20, "tags": [], "img": "img/1002964.webp"}, {"id": "1004083", "cat": "Tabletes 5 g", "nome": "Bendito Cacao 85%", "linha": "Tablete 5 g", "titulo": "Tablete de Chocolate Intenso Bendito Cacao 85% 5g", "desc": "Tablete de chocolate 85% cacau, com sabor intenso e marcante. Ideal para quem aprecia chocolates com alto teor de cacau.", "preco": 1.39, "qtd": 17, "tags": [], "img": "img/1004083.webp"}, {"id": "1002962", "cat": "Tabletes 5 g", "nome": "Menta", "linha": "Tablete 5 g", "titulo": "Tablete de Chocolate ao Leite e Menta 5g", "desc": "Tablete de chocolate ao leite com sabor de menta. Combina com um bom café.", "preco": 1.39, "qtd": 10, "tags": [], "img": "img/1002962.webp"}];
+const ORDEM = ['Presentes & Natal','Trufas 30 g','Tabletes 100 g','Zero Açúcar e Lactose','Tabletes 20 g','Bytes e Drageados','Biscoiteria','Tabletes 5 g'];
+
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const brl = (v) => v.toLocaleString('pt-BR', {style:'currency', currency:'BRL'});
+const fone = CONFIG.whatsapp.replace(/^55(\d{2})(\d{5})(\d{4})$/, '($1) $2-$3');
+const byId = Object.fromEntries(P.map((p) => [p.id, p]));
+const KEY = 'gt_selecao_v1';
+let sel = {};
+try { sel = JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { sel = {}; }
+for (const k of Object.keys(sel)) { if (!byId[k]) delete sel[k]; else sel[k] = Math.min(sel[k], byId[k].qtd); }
+const st = { cat: 'Todos', q: '', idx: -1, qty: 1, visiveis: [] };
+
+const salvar = () => { try { localStorage.setItem(KEY, JSON.stringify(sel)); } catch (e) {} };
+const total = () => Object.values(sel).reduce((a, b) => a + b, 0);
+const wa = (msg) => window.open('https://wa.me/' + CONFIG.whatsapp + '?text=' + encodeURIComponent(msg), '_blank', 'noopener');
+let tt;
+const toast = (m) => { const t = $('toast'); t.textContent = m; t.classList.add('on'); clearTimeout(tt); tt = setTimeout(() => t.classList.remove('on'), 1800); };
+const norm = (s) => s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+
+$('nomeTopo').textContent = CONFIG.nome;
+$('nomeRodape').textContent = CONFIG.nome;
+$('foneRodape').textContent = 'WhatsApp ' + fone;
+
+/* ============ categorias ============ */
+function renderCats() {
+  const cats = ['Todos', ...ORDEM];
+  $('cats').innerHTML = cats.map((c) => {
+    const n = c === 'Todos' ? P.length : P.filter((p) => p.cat === c).length;
+    return `<button class="cat" type="button" data-cat="${esc(c)}" aria-pressed="${c === st.cat}">${esc(c)}<em>${n}</em></button>`;
+  }).join('');
+}
+
+/* ============ lista ============ */
+const svgMais = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg>';
+function card(p) {
+  const q = sel[p.id] || 0;
+  const tag = p.tags.includes('zero') ? '<span class="tag zero">Zero açúcar · zero lactose</span>'
+            : p.qtd <= CONFIG.ultimasUnidades ? '<span class="tag last">Últimas unidades</span>' : '';
+  return `<article class="card">
+    <button class="stage" type="button" data-abre="${p.id}" aria-label="Ver ${esc(p.linha)} ${esc(p.nome)}">
+      ${tag}<img src="${p.img}" alt="${esc(p.titulo)}" loading="lazy" decoding="async" width="720" height="720">
+    </button>
+    <button class="info" type="button" data-abre="${p.id}" tabindex="-1" aria-hidden="true">
+      <small>${esc(p.linha)}</small><b>${esc(p.nome)}</b>
+      ${CONFIG.mostrarPreco ? `<span class="pr">${brl(p.preco)}</span>` : ''}
+    </button>
+    <button class="add${q ? ' on' : ''}" type="button" data-add="${p.id}" aria-label="Adicionar ${esc(p.nome)}">${q ? `<span>${q}</span>` : ''}${svgMais}</button>
+  </article>`;
+}
+function renderLista() {
+  const q = norm(st.q.trim());
+  const ok = (p) => (st.cat === 'Todos' || p.cat === st.cat) &&
+    (!q || norm(`${p.nome} ${p.linha} ${p.titulo} ${p.cat} ${p.desc}`).includes(q));
+  st.visiveis = [];
+  let html = '';
+  for (const c of ORDEM) {
+    const its = P.filter((p) => p.cat === c && ok(p));
+    if (!its.length) continue;
+    st.visiveis.push(...its);
+    html += `<section class="sec"><h2>${esc(c)}<small>${its.length} ${its.length === 1 ? 'opção' : 'opções'}</small></h2><div class="grid">${its.map(card).join('')}</div></section>`;
+  }
+  $('lista').innerHTML = html || '<p class="empty">Nenhum chocolate encontrado. Tente outro sabor.</p>';
+}
+
+/* ============ seleção ============ */
+function addSel(id, n) {
+  const p = byId[id]; const atual = sel[id] || 0;
+  const novo = Math.min(p.qtd, atual + n);
+  if (novo === atual) { toast('Você já separou todas as unidades disponíveis'); return false; }
+  sel[id] = novo; salvar(); renderBar(); renderLista(); return true;
+}
+function setSel(id, v) {
+  const p = byId[id];
+  v = Math.max(0, Math.min(p.qtd, v));
+  if (v === 0) delete sel[id]; else sel[id] = v;
+  salvar(); renderBar(); renderLista(); renderBag();
+}
+function renderBar() {
+  const n = total();
+  $('barN').textContent = n;
+  $('barS').textContent = n === 1 ? '1 item · enviar pelo WhatsApp' : n + ' itens · enviar pelo WhatsApp';
+  $('bar').classList.toggle('show', n > 0);
+}
+function renderBag() {
+  const ids = Object.keys(sel);
+  $('bRodape').hidden = !ids.length;
+  if (!ids.length) {
+    $('bLista').innerHTML = '<div class="bempty"><b>Sua seleção está vazia</b>Toque no + de um chocolate para separar.</div>';
+    return;
+  }
+  $('bLista').innerHTML = ids.map((id) => { const p = byId[id]; return `
+    <div class="it"><img src="${p.img}" alt="">
+      <div><small>${esc(p.linha)}</small><b>${esc(p.nome)}</b>${CONFIG.mostrarPreco ? `<span style="font-size:12px;color:var(--muted)">${brl(p.preco * sel[id])}</span>` : ''}</div>
+      <div class="qty" style="flex:none"><button type="button" data-menos="${id}" aria-label="Diminuir">−</button><span>${sel[id]}</span><button type="button" data-mais="${id}" aria-label="Aumentar">+</button></div>
+    </div>`; }).join('');
+  const n = total();
+  const vt = ids.reduce((a, id) => a + byId[id].preco * sel[id], 0);
+  $('bTot').textContent = (n === 1 ? '1 item' : n + ' itens') + (CONFIG.mostrarPreco ? ' · ' + brl(vt) : '');
+}
+function msgPedido() {
+  const nome = $('cNome').value.trim();
+  const rec = document.querySelector('input[name="rec"]:checked').value;
+  const obs = $('cObs').value.trim();
+  const L = [`Olá, ${CONFIG.nome}! Separei estes chocolates no seu catálogo:`, ''];
+  let vt = 0;
+  for (const id of Object.keys(sel)) {
+    const p = byId[id]; vt += p.preco * sel[id];
+    L.push(`• ${sel[id]}x ${p.nome} (${p.linha})` + (CONFIG.mostrarPreco ? ` (${brl(p.preco * sel[id])})` : ''));
+  }
+  if (CONFIG.mostrarPreco) L.push('', `Total: ${brl(vt)}`);
+  L.push('');
+  if (nome) L.push(`Nome: ${nome}`);
+  L.push(`Receber: ${rec}`);
+  if (obs) L.push(`Obs.: ${obs}`);
+  return L.join('\n');
+}
+
+/* ============ modal produto ============ */
+function abrir(id) {
+  st.idx = st.visiveis.findIndex((p) => p.id === id);
+  if (st.idx < 0) return;
+  pintar();
+  mostrar('ovProd', true);
+}
+function pintar() {
+  const p = st.visiveis[st.idx];
+  st.qty = 1;
+  $('pImg').src = p.img; $('pImg').alt = p.titulo;
+  $('pCnt').textContent = (st.idx + 1) + ' / ' + st.visiveis.length;
+  $('pCat').textContent = p.cat;
+  $('pNome').textContent = p.nome;
+  $('pTit').textContent = p.titulo;
+  $('pDesc').textContent = p.desc;
+  const ch = [`<span>${esc(p.linha)}</span>`];
+  if (p.tags.includes('zero')) ch.push('<span class="z">Zero adição de açúcar e zero lactose</span>');
+  if (p.qtd <= CONFIG.ultimasUnidades) ch.push('<span class="l">Últimas unidades</span>');
+  else ch.push('<span>Pronta entrega</span>');
+  $('pChips').innerHTML = ch.join('');
+  $('pPreco').hidden = !CONFIG.mostrarPreco;
+  if (CONFIG.mostrarPreco) $('pPreco').textContent = brl(p.preco);
+  pintarQty();
+}
+function pintarQty() {
+  const p = st.visiveis[st.idx]; const ja = sel[p.id] || 0; const resta = p.qtd - ja;
+  st.qty = Math.max(1, Math.min(st.qty, Math.max(resta, 1)));
+  $('qVal').textContent = st.qty;
+  $('pAdd').disabled = resta <= 0;
+  $('pAdd').textContent = resta <= 0 ? 'Todas as unidades já estão na seleção' : (ja ? `Adicionar (${ja} na seleção)` : 'Adicionar à seleção');
+  $('pAdd').style.opacity = resta <= 0 ? '.55' : '';
+  $('pLim').textContent = ja ? `Você já separou ${ja}.` : '';
+}
+function passo(d) {
+  if (st.visiveis.length < 2) return;
+  st.idx = (st.idx + d + st.visiveis.length) % st.visiveis.length;
+  pintar();
+}
+let ultimoFoco = null;
+function mostrar(id, on) {
+  const el = $(id);
+  if (on) { ultimoFoco = document.activeElement; }
+  el.classList.toggle('on', on);
+  el.setAttribute('aria-hidden', String(!on));
+  document.body.style.overflow = (on || document.querySelector('.ov.on')) ? 'hidden' : '';
+  if (on) setTimeout(() => el.querySelector('.x').focus(), 50);
+  else if (ultimoFoco) ultimoFoco.focus();
+}
+
+/* ============ eventos ============ */
+$('cats').addEventListener('click', (e) => {
+  const b = e.target.closest('[data-cat]'); if (!b) return;
+  st.cat = b.dataset.cat; renderCats(); renderLista();
+  window.scrollTo({ top: document.querySelector('.tools').offsetTop - 64, behavior: 'smooth' });
+});
+$('busca').addEventListener('input', (e) => { st.q = e.target.value; $('limpa').style.display = st.q ? 'block' : 'none'; renderLista(); });
+$('limpa').addEventListener('click', () => { st.q = ''; $('busca').value = ''; $('limpa').style.display = 'none'; renderLista(); $('busca').focus(); });
+$('lista').addEventListener('click', (e) => {
+  const a = e.target.closest('[data-add]');
+  if (a) { if (addSel(a.dataset.add, 1)) toast(byId[a.dataset.add].nome + ' separado'); return; }
+  const o = e.target.closest('[data-abre]'); if (o) abrir(o.dataset.abre);
+});
+$('pFecha').onclick = () => mostrar('ovProd', false);
+$('ovProd').addEventListener('click', (e) => { if (e.target.id === 'ovProd') mostrar('ovProd', false); });
+$('pAnt').onclick = () => passo(-1); $('pProx').onclick = () => passo(1);
+$('qMenos').onclick = () => { st.qty = Math.max(1, st.qty - 1); pintarQty(); };
+$('qMais').onclick = () => { const p = st.visiveis[st.idx]; st.qty = Math.min(p.qtd - (sel[p.id] || 0), st.qty + 1); pintarQty(); };
+$('pAdd').onclick = () => { const p = st.visiveis[st.idx]; if (addSel(p.id, st.qty)) { toast(st.qty + 'x ' + p.nome + ' separado'); mostrar('ovProd', false); } };
+$('pPerg').onclick = () => { const p = st.visiveis[st.idx]; wa(`Olá, ${CONFIG.nome}! Vi no seu catálogo: ${p.nome} (${p.linha}). Queria saber mais.`); };
+let x0 = 0;
+$('pStage').addEventListener('touchstart', (e) => { x0 = e.changedTouches[0].clientX; }, { passive: true });
+$('pStage').addEventListener('touchend', (e) => { const dx = e.changedTouches[0].clientX - x0; if (Math.abs(dx) > 45) passo(dx < 0 ? 1 : -1); }, { passive: true });
+
+$('bar').onclick = () => { renderBag(); mostrar('ovBag', true); };
+$('bFecha').onclick = () => mostrar('ovBag', false);
+$('ovBag').addEventListener('click', (e) => { if (e.target.id === 'ovBag') mostrar('ovBag', false); });
+$('bLista').addEventListener('click', (e) => {
+  const m = e.target.closest('[data-mais]'); if (m) { const id = m.dataset.mais; if ((sel[id] || 0) >= byId[id].qtd) toast('Essas são todas as unidades disponíveis'); setSel(id, (sel[id] || 0) + 1); return; }
+  const n = e.target.closest('[data-menos]'); if (n) setSel(n.dataset.menos, (sel[n.dataset.menos] || 0) - 1);
+});
+$('bLimpa').onclick = () => { sel = {}; salvar(); renderBar(); renderLista(); renderBag(); };
+$('bEnvia').onclick = () => { if (total()) wa(msgPedido()); };
+$('waTopo').onclick = () => wa(`Olá, ${CONFIG.nome}! Vim pelo seu catálogo de chocolates.`);
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') { if ($('ovProd').classList.contains('on')) mostrar('ovProd', false); else if ($('ovBag').classList.contains('on')) mostrar('ovBag', false); }
+  if ($('ovProd').classList.contains('on')) { if (e.key === 'ArrowLeft') passo(-1); if (e.key === 'ArrowRight') passo(1); }
+});
+
+renderCats(); renderLista(); renderBar();
+})();
+</script>
+</body>
+</html>
